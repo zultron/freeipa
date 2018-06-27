@@ -1,12 +1,12 @@
-#!/usr/bin/bash
+#!/usr/bin/bash -xe
 set -o errexit
 
 pushd "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-test ! -x "configure" && autoreconf -i
+autoreconf -i
 # run configure with the same parameters as RPM build
 # this makes it easy to tweak files locally and use make install
-test ! -f "Makefile" && ./configure --enable-silent-rules \
+./configure --enable-silent-rules \
 	--host=$(rpm -E %{_host}) \
 	--build=$(rpm -E %{_build}) \
 	--program-prefix=$(rpm -E %{?_program_prefix}) \

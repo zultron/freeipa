@@ -63,8 +63,8 @@
 %define _hardened_build 1
 
 # Work-around fact that RPM SPEC parser does not accept
-# "Version: 4.6.90.dev201806272025+git7c2dba191" in freeipa.spec.in used for Autoconf string replacement
-%define IPA_VERSION 4.6.90.dev201806272025+git7c2dba191
+# "Version: 4.6.90.dev201806272043+gitfb34e05cd" in freeipa.spec.in used for Autoconf string replacement
+%define IPA_VERSION 4.6.90.dev201806272043+gitfb34e05cd
 %define AT_SIGN @
 # redefine IPA_VERSION only if its value matches the Autoconf placeholder
 %if "%{IPA_VERSION}" == "%{AT_SIGN}VERSION%{AT_SIGN}"
@@ -1681,6 +1681,6 @@ fi
 
 
 %changelog
-* Tue Nov 26 2013 Petr Viktorin <pviktori@redhat.com> - 4.6.90.dev201806272025+git7c2dba191-
+* Tue Nov 26 2013 Petr Viktorin <pviktori@redhat.com> - 4.6.90.dev201806272043+gitfb34e05cd-
 - Remove changelog. The history is kept in Git, downstreams have own logs.
 # note, this entry is here to placate tools that expect a non-empty changelog

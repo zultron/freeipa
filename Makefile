@@ -278,7 +278,7 @@ EXEEXT =
 FGREP = /usr/bin/grep -F
 GETTEXT_DOMAIN = ipa
 GETTEXT_MACRO_VERSION = 0.18
-GIT_VERSION = dev201806272025+git7c2dba191
+GIT_VERSION = dev201806272043+gitfb34e05cd
 GMSGFMT = /usr/bin/msgfmt
 GMSGFMT_015 = /usr/bin/msgfmt
 GREP = /usr/bin/grep
@@ -351,10 +351,10 @@ OTOOL64 =
 PACKAGE = freeipa
 PACKAGE_BUGREPORT = https://hosted.fedoraproject.org/projects/freeipa/newticket
 PACKAGE_NAME = freeipa
-PACKAGE_STRING = freeipa 4.6.90.dev201806272025+git7c2dba191
+PACKAGE_STRING = freeipa 4.6.90.dev201806272043+gitfb34e05cd
 PACKAGE_TARNAME = freeipa
 PACKAGE_URL = 
-PACKAGE_VERSION = 4.6.90.dev201806272025+git7c2dba191
+PACKAGE_VERSION = 4.6.90.dev201806272043+gitfb34e05cd
 PATH_SEPARATOR = :
 PKG_CONFIG = /usr/bin/x86_64-redhat-linux-gnu-pkg-config
 PKG_CONFIG_LIBDIR = 
@@ -397,7 +397,7 @@ USE_NLS = yes
 UUID_CFLAGS = -I/usr/include/uuid 
 UUID_LIBS = -luuid 
 VENDOR_SUFFIX = 
-VERSION = 4.6.90.dev201806272025+git7c2dba191
+VERSION = 4.6.90.dev201806272043+gitfb34e05cd
 XGETTEXT = /usr/bin/xgettext
 XGETTEXT_015 = /usr/bin/xgettext
 XGETTEXT_EXTRA_OPTIONS = 
@@ -505,8 +505,8 @@ EXTRA_DIST = .mailmap \
 	     .wheelconstraints.in
 
 TARBALL = $(PACKAGE)-$(VERSION).tar.gz
-VERSION_UPDATE_TARGET = version-update
-VERSION_BAKEIN_TARGET = _dist-version-bakein
+#VERSION_UPDATE_TARGET = version-update
+#VERSION_BAKEIN_TARGET = _dist-version-bakein
 POLINT_TARGET = polint
 PYLINT_TARGET = pylint
 JSLINT_TARGET = jslint
@@ -1087,8 +1087,8 @@ version-update:
 
 # convert Git snapshot version to static value usable from inside of tarball
 _dist-version-bakein:
-#	@echo "version-bakein target requires IPA_VERSION_IS_GIT_SNAPSHOT=yes"
-#	exit 1
+	@echo "version-bakein target requires IPA_VERSION_IS_GIT_SNAPSHOT=yes"
+	exit 1
 	chmod u+w $(top_distdir)/VERSION.m4
 	$(SED) -e 's/^define(IPA_VERSION_IS_GIT_SNAPSHOT,.*)/define(IPA_VERSION_IS_GIT_SNAPSHOT, no)/' -i $(top_distdir)/VERSION.m4
 	$(SED) -e 's/^define(IPA_VERSION_PRE_RELEASE,\(.*\))/define(IPA_VERSION_PRE_RELEASE,\1.$(GIT_VERSION))/' -i $(top_distdir)/VERSION.m4
@@ -1111,10 +1111,10 @@ rpms: $(VERSION_UPDATE_TARGET)
 	$(MAKE) _rpms-body
 
 _rpms-body: _rpms-prep
-	rpmbuild --define "_topdir $(RPMBUILD)" -ba $(top_builddir)/$(PACKAGE).spec  $(RPMBUILD_OPTS)
-	cp $(RPMBUILD)/RPMS/*/*$$(cat $(top_builddir)/.version)*.rpm $(top_builddir)/dist/rpms/
-	cp $(RPMBUILD)/SRPMS/*$$(cat $(top_builddir)/.version)*.src.rpm $(top_builddir)/dist/srpms/
-	rm -f rm -f $(top_builddir)/.version
+#	# rpmbuild --define "_topdir $(RPMBUILD)" -ba $(top_builddir)/$(PACKAGE).spec  $(RPMBUILD_OPTS)
+#	# cp $(RPMBUILD)/RPMS/*/*$$(cat $(top_builddir)/.version)*.rpm $(top_builddir)/dist/rpms/
+#	# cp $(RPMBUILD)/SRPMS/*$$(cat $(top_builddir)/.version)*.src.rpm $(top_builddir)/dist/srpms/
+#	# rm -f rm -f $(top_builddir)/.version
 
 srpms: $(VERSION_UPDATE_TARGET)
 	$(MAKE) _srpms-body

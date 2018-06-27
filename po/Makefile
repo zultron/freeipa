@@ -12,7 +12,7 @@
 GETTEXT_MACRO_VERSION = 0.18
 
 PACKAGE = freeipa
-VERSION = 4.6.90.dev201806272025+git7c2dba191
+VERSION = 4.6.90.dev201806272043+gitfb34e05cd
 PACKAGE_BUGREPORT = https://hosted.fedoraproject.org/projects/freeipa/newticket
 
 SHELL = /bin/sh
@@ -192,6 +192,7 @@ POTFILES = \
      .././install/share/wsgi.py \
      .././install/migration/migration.py \
      .././install/wsgi/plugins.py \
+     .././ipasetup.py \
      .././contrib/nssciphersuite/nssciphersuite.py \
      .././contrib/copy-schema-to-ca-RHEL6.py \
      .././contrib/lite-server.py \
@@ -382,6 +383,7 @@ POTFILES = \
      .././ipapython/kernel_keyring.py \
      .././ipapython/ipavalidate.py \
      .././ipapython/admintool.py \
+     .././ipapython/version.py \
      .././ipapython/session_storage.py \
      .././ipapython/ssh.py \
      .././ipapython/errors.py \
@@ -1132,7 +1134,7 @@ $(DOMAIN).pot-update: $(POTFILES) $(srcdir)/POTFILES.in remove-potcdate.sed
 	      --files-from=$(srcdir)/POTFILES.in \
 	      --copyright-holder='$(COPYRIGHT_HOLDER)' \
 	      --package-name="$${package_gnu}freeipa" \
-	      --package-version='4.6.90.dev201806272025+git7c2dba191' \
+	      --package-version='4.6.90.dev201806272043+gitfb34e05cd' \
 	      --msgid-bugs-address="$$msgid_bugs_address" \
 	    ;; \
 	esac

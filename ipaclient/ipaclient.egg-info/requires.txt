@@ -1,6 +1,6 @@
 cryptography>=1.6
-ipalib==4.6.90.dev201806272025+git7c2dba191
-ipapython==4.6.90.dev201806272025+git7c2dba191
+ipalib==4.6.90.dev201806272043+gitfb34e05cd
+ipapython==4.6.90.dev201806272043+gitfb34e05cd
 qrcode>=5.0
 six
 

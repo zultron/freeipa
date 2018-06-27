@@ -18,10 +18,10 @@
 #
 
 # The full version including strings
-VERSION="4.6.90.dev201806272025+git7c2dba191"
+VERSION="4.6.90.dev201806272043+gitfb34e05cd"
 
 # A fuller version including the vendor tag (e.g. 3.3.3-34.fc20)
-VENDOR_VERSION="4.6.90.dev201806272025+git7c2dba191"
+VENDOR_VERSION="4.6.90.dev201806272043+gitfb34e05cd"
 
 
 # Just the numeric portion of the version so one can do direct numeric

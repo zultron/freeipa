@@ -117,6 +117,7 @@
      .././install/share/wsgi.py \
      .././install/migration/migration.py \
      .././install/wsgi/plugins.py \
+     .././ipasetup.py \
      .././contrib/nssciphersuite/nssciphersuite.py \
      .././contrib/copy-schema-to-ca-RHEL6.py \
      .././contrib/lite-server.py \
@@ -307,6 +308,7 @@
      .././ipapython/kernel_keyring.py \
      .././ipapython/ipavalidate.py \
      .././ipapython/admintool.py \
+     .././ipapython/version.py \
      .././ipapython/session_storage.py \
      .././ipapython/ssh.py \
      .././ipapython/errors.py \

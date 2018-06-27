@@ -365,15 +365,16 @@ dnl ---------------------------------------------------------------------------
 dnl Version information from VERSION.m4 and command line
 dnl ---------------------------------------------------------------------------
 dnl Are we in source tree?
-AM_CONDITIONAL([IS_GIT_SNAPSHOT], [test "IPA_VERSION_IS_GIT_SNAPSHOT" == "yes"])
-AM_COND_IF([IS_GIT_SNAPSHOT], [
-	AC_MSG_CHECKING([if source directory is a Git reposistory])
-	if test ! -e "${srcdir}/.git"; then
-		AC_MSG_ERROR([Git reposistory is required by VERSION.m4 IPA_VERSION_IS_GIT_SNAPSHOT but not found])
-	else
-		AC_MSG_RESULT([yes])
-	fi
-])
+dnl AM_CONDITIONAL([IS_GIT_SNAPSHOT], [test "IPA_VERSION_IS_GIT_SNAPSHOT" == "yes"])
+dnl AM_COND_IF([IS_GIT_SNAPSHOT], [
+dnl 	AC_MSG_CHECKING([if source directory is a Git reposistory])
+dnl 	if test ! -e "${srcdir}/.git"; then
+dnl 		AC_MSG_ERROR([Git reposistory is required by VERSION.m4 IPA_VERSION_IS_GIT_SNAPSHOT but not found])
+dnl 	else
+dnl 		AC_MSG_RESULT([yes])
+dnl 	fi
+dnl ])
+AM_CONDITIONAL([IS_GIT_SNAPSHOT], [false])
 
 AC_ARG_WITH([vendor-suffix],
             AS_HELP_STRING([--with-vendor-suffix=STRING],

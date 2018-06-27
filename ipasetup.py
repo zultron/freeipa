@@ -53,7 +53,7 @@ class build_py(setuptools_build_py):
 
 import setuptools
 
-VERSION = '4.6.90.dev201806272025+git7c2dba191'
+VERSION = '4.6.90.dev201806272043+gitfb34e05cd'
 
 SETUPTOOLS_VERSION = tuple(int(v) for v in setuptools.__version__.split("."))
 

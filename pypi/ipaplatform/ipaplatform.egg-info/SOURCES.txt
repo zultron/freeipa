@@ -1,0 +1,9 @@
+README.txt
+setup.cfg
+setup.py
+ipaplatform/__init__.py
+ipaplatform.egg-info/PKG-INFO
+ipaplatform.egg-info/SOURCES.txt
+ipaplatform.egg-info/dependency_links.txt
+ipaplatform.egg-info/requires.txt
+ipaplatform.egg-info/top_level.txt

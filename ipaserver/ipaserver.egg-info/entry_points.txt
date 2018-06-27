@@ -1,0 +1,6 @@
+[custodia.authorizers]
+IPAKEMKeys = ipaserver.secrets.kem:IPAKEMKeys
+
+[custodia.stores]
+IPASecStore = ipaserver.secrets.store:IPASecStore
+

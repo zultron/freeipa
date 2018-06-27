@@ -1,0 +1,9 @@
+README.txt
+setup.cfg
+setup.py
+ipatests/__init__.py
+ipatests.egg-info/PKG-INFO
+ipatests.egg-info/SOURCES.txt
+ipatests.egg-info/dependency_links.txt
+ipatests.egg-info/requires.txt
+ipatests.egg-info/top_level.txt

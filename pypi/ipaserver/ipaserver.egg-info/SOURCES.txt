@@ -1,0 +1,9 @@
+README.txt
+setup.cfg
+setup.py
+ipaserver/__init__.py
+ipaserver.egg-info/PKG-INFO
+ipaserver.egg-info/SOURCES.txt
+ipaserver.egg-info/dependency_links.txt
+ipaserver.egg-info/requires.txt
+ipaserver.egg-info/top_level.txt

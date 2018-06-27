@@ -1,0 +1,8 @@
+README.txt
+setup.cfg
+setup.py
+freeipa.egg-info/PKG-INFO
+freeipa.egg-info/SOURCES.txt
+freeipa.egg-info/dependency_links.txt
+freeipa.egg-info/requires.txt
+freeipa.egg-info/top_level.txt

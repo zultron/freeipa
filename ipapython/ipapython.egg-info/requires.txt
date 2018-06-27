@@ -1,0 +1,17 @@
+cffi
+cryptography>=1.6
+dnspython>=1.15
+gssapi>=1.2.0
+netaddr
+netifaces>=0.10.4
+six
+
+[:python_version<'3']
+enum34
+python-ldap
+
+[:python_version>='3']
+pyldap
+
+[install]
+dbus-python
